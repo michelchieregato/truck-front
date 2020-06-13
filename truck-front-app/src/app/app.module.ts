@@ -6,7 +6,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component"
 import { PasswordRecoveryComponent } from "./password-recovery/password-recovery.component"
-import { SignUpComponent } from "./sign-up/sign-up.component"
+import { SignUpComponent } from "./sign-up/sign-up.component";
+import { SurroundingsComponent } from './surroundings/surroundings.component'
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
@@ -24,7 +25,8 @@ import { SignUpComponent } from "./sign-up/sign-up.component"
         AppComponent,
         LoginComponent,
         PasswordRecoveryComponent,
-        SignUpComponent
+        SignUpComponent,
+        SurroundingsComponent
     ],
     providers: [],
     schemas: [
