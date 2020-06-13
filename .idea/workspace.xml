@@ -4,7 +4,6 @@
     <list default="true" id="0983c56a-3ecb-482d-a4d8-49f654993f06" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/truck-front-app/src/app/home/home.component.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/truck-front-app/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/truck-front-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/truck-front-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/truck-front-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/src/app/app.module.ts" afterDir="false" />
@@ -12,10 +11,9 @@
       <change beforePath="$PROJECT_DIR$/truck-front-app/src/app/password-recovery/password-recovery.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/src/app/password-recovery/password-recovery.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/truck-front-app/src/app/password-recovery/password-recovery.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/src/app/password-recovery/password-recovery.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/truck-front-app/src/app/sign-up/sign-up.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/src/app/sign-up/sign-up.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/truck-front-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/truck-front-app/angular.json" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,12 +183,19 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectId" id="1dHD1U1SPIA0EDvEHGrMQBe3nBb" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/truck-front-app/src/app/login" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/truck-front-app/node_modules/typescript/lib" />
@@ -257,6 +262,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="additionalRoots">
+      <list>
+        <option value="$PROJECT_DIR$/truck-front-app/node_modules" />
+      </list>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/truck-front-app/src/app/app.component.ts">
