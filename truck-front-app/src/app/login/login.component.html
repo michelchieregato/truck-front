@@ -1,14 +1,14 @@
 <StackLayout>
 	<Label text="Faça login"></Label>
-	<TextField [(ngModel)]="email"
-				hint="Insira seu email">
-	</TextField>
-	<TextField [(ngModel)]="password"
-				hint="Senha">
-	</TextField>
+	<TextField [(ngModel)]="name" hint="Qual o seu nome?" *ngIf="isNewUser"></TextField>
+	<TextField [(ngModel)]="phoneNumber" hint="Qual seu número de telefone?" *ngIf="isNewUser"></TextField>
+	<TextField [(ngModel)]="email" hint="Insira seu email"></TextField>
+	<TextField [(ngModel)]="password" hint="Senha"></TextField>
+	<TextField [(ngModel)]="confirmPassword" hint="Confirme sua senha" *ngIf="isNewUser"></TextField>
 	<Label text="Esqueceu sua senha?"></Label>
 	<Button (tap)="submitUserInfo()"
-			text="Login">
+			text="{{isNewUser ? 'Cadastre-se' : 'Login'}}">
 	</Button>
-	<Label text="Ainda não tem uma conta?"></Label>
+	<Label text="{{isNewUser ? 'Já tem uma conta?' : 'Ainda não tem uma conta?'}}"></Label>
+	<Label text="{{isNewUser ? 'Faça login' : 'Cadastre-se'}}" (tap)="isNewUser = !isNewUser"></Label>
 </StackLayout>
