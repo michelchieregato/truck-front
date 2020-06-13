@@ -21,4 +21,8 @@ export class PasswordRecoveryComponent {
     navigateToLogin() {
        this.router.navigateByUrl('/login');
     }
+
+    navigateToSignUp() {
+       this.router.navigateByUrl('/sign-up');
+    }
 }

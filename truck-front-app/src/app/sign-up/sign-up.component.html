@@ -1,0 +1,15 @@
+<StackLayout>
+	<Label text="Faça um cadastro"></Label>
+	<Label text="Crie uma conta, junte pontos e troque por benefícios!"></Label>
+	<TextField [(ngModel)]="name" hint="Qual o seu nome?"></TextField>
+	<TextField [(ngModel)]="phoneNumber" hint="Qual seu número de telefone?"></TextField>
+	<TextField [(ngModel)]="email" hint="Insira seu email"></TextField>
+	<TextField [(ngModel)]="password" hint="Senha"></TextField>
+	<TextField [(ngModel)]="confirmPassword" hint="Confirme sua senha"></TextField>
+	<Label text="Esqueceu sua senha?" (tap)="navigateToPasswordRecovery()"></Label>
+	<Button (tap)="submitUserInfo()"
+			text="Cadastre-se">
+	</Button>
+	<Label text="Já tem uma conta?'"></Label>
+	<Label text="Faça login" (tap)="navigateToLogin()"></Label>
+</StackLayout>
