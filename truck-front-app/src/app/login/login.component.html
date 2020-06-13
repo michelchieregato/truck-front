@@ -1,0 +1,13 @@
+<StackLayout>
+	<Label text="Faça login"></Label>
+	<TextField [(ngModel)]="email"
+				hint="Insira seu email">
+	</TextField>
+	<TextField [(ngModel)]="password"
+				hint="Senha">
+	</TextField>
+	<Button (tap)="submitUserInfo()"
+			text="Login">
+	</Button>
+	<Label text="Ainda não tem uma conta?"></Label>
+</StackLayout>
