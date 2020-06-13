@@ -4,8 +4,6 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
 import { LoginComponent } from "./login/login.component"
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
@@ -22,8 +20,6 @@ import { LoginComponent } from "./login/login.component"
     ],
     declarations: [
         AppComponent,
-        ItemsComponent,
-        ItemDetailComponent,
         LoginComponent
     ],
     providers: [],
