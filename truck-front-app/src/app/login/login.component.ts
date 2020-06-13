@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'login',
@@ -8,14 +9,20 @@ import { Component } from "@angular/core";
 })
 
 export class LoginComponent {
+    constructor(private router: Router) {}
+
     email = '';
     password = '';
     name = '';
     phoneNumber = '';
     confirmPassword = '';
-    isNewUser = true;
+    isNewUser = false;
 
     submitUserInfo() {
         console.log('clickando!!')
+    }
+
+    navigateToPasswordRecovery() {
+       this.router.navigateByUrl('/password-recovery');
     }
 }
