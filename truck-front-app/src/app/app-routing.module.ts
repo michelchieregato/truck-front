@@ -9,7 +9,7 @@ import {SurroundingsComponent} from "~/app/surroundings/surroundings.component";
 import { HomeComponent } from "./home/home.component"
 
 const routes: Routes = [
-    { path: "", redirectTo: "/surrounding", pathMatch: "full" },
+    { path: "", redirectTo: "/login", pathMatch: "full" },
     { path: "login", component: LoginComponent },
     { path: "password-recovery", component: PasswordRecoveryComponent },
     { path: "sign-up", component: SignUpComponent },
