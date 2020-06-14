@@ -1,0 +1,28 @@
+<FlexboxLayout flexDirection="column" justifyContent="flex-start">
+    <Image src="~/images/sau.png" class="big-img" stretch="aspectFill"></Image>
+    <FlexboxLayout class="orange-title" flexDirection="column">
+        <Label class="h1 title" [text]="place.name" textWrap="true"></Label>
+        <Label class="h3 sub-title" [text]="place.address" textWrap="true"></Label>
+        <Label class="h3 sub-title" [text]="'Horário de Funcionamento:  ' + place.workingTime"></Label>
+    </FlexboxLayout>
+    <FlexboxLayout class="evaluations" flexDirection="column">
+        <FlexboxLayout class="ratings" flexDirection="row">
+            <Label text="Avaliação: " class="label-title"></Label>
+            <Label *ngFor="let _ of [].constructor(place.rating)" class="fas" style="font-size: 14; color: #F5A623" text="&#xf005;"></Label>
+            <Label *ngFor="let _ of [].constructor(5 - place.rating)" class="fas" style="font-size: 14; color: #C4C4C4;" text="&#xf005;"></Label>
+            <Label class="link" text="Adicionar aos favoritos" (tap)="navigateToFavorites()"></Label>
+        </FlexboxLayout>
+        <Label text="Serviços oferecidos: " marginTop="5"  class="label-title"></Label>
+        <Label [text]="place.services" marginTop="5"  textWrap="true"></Label>
+        <Label text="O que dizem sobre: " marginTop="10" class="label-title"></Label>
+        <FlexboxLayout flexDirection="column">
+            <StackLayout *ngFor="let item of place.messages">
+                <FlexboxLayout class="messages-div" flexDirection="row">
+                    <Label class="user-comment" [text]="'@' + item.user + ': '"></Label>
+                    <Label [text]="item.message" class="message-item" textWrap="true" width="60%"></Label>
+                </FlexboxLayout>
+            </StackLayout>
+        </FlexboxLayout>
+        <Button text="Avaliar local" class="btn btn-primary"></Button>
+    </FlexboxLayout>
+</FlexboxLayout>

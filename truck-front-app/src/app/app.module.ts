@@ -20,6 +20,8 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { LocationsFilterComponent } from './locations-filter/locations-filter.component';
 
 import { isAndroid, isIOS, device, screen } from "tns-core-modules/platform";
+import { EvaluateComponent } from './evaluate/evaluate.component';
+import {CommonModule} from "@angular/common";
 declare var GMSServices: any;
 
 
@@ -33,7 +35,8 @@ declare var GMSServices: any;
         NativeScriptHttpClientModule,
         AppRoutingModule,
         AppRoutingModule,
-        NativeScriptHttpClientModule
+        NativeScriptHttpClientModule,
+        CommonModule
     ],
     declarations: [
         AppComponent,
@@ -46,7 +49,8 @@ declare var GMSServices: any;
         CreateTripComponent,
         ListSavedPathsComponent,
         FavouritesComponent,
-        LocationsFilterComponent
+        LocationsFilterComponent,
+        EvaluateComponent
     ],
     providers: [
         {
