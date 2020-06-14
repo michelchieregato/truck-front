@@ -62,6 +62,7 @@ export class LocationsListComponent implements OnInit {
 
     private getLocations() {
         // back integration
+        this.placesList = this.placesListMock;
         if (this.type) {
             this.placesList = this.placesListMock.filter((place) => {
                 return place.types.includes(this.type);
