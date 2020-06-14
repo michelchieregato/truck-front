@@ -2,14 +2,14 @@
 	<Label class="where-title" text="Onde você vai?" height="60"></Label>
 	<StackLayout class="nt-form" height="160" borderBottomColor="#BFBFBF">
 		<StackLayout class="nt-input" width="">
-			<TextField class="-border text-left text-input" [(ngModel)]="currentLocation" hint="Meu local"
+			<TextField class="-border text-left text-input" [(ngModel)]="currentPlace" hint="Meu local"
 					   autocorrect="false"></TextField>
 		</StackLayout>
 		<StackLayout class="nt-input">
 			<TextField class="-border text-left text-input" [(ngModel)]="destination" hint="Destino"
 					   autocorrect="false"></TextField>
 		</StackLayout>
-		<Button text="Buscar meu trajeto" class="btn" (tap)="submitTrip()"></Button>
+		<Button text="Buscar meu trajeto" class="btn" (tap)="submitDestination()"></Button>
 	</StackLayout>
 	<ns-list-saved-paths></ns-list-saved-paths>
 </FlexboxLayout>
