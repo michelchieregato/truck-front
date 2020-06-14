@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ClientService} from '~/app/services/client.service'
 
 @Component({
@@ -10,6 +10,10 @@ import {ClientService} from '~/app/services/client.service'
 })
 export class ListSavedPathsComponent implements OnInit {
   destinationsList: any;
+  onlyFavorites: boolean;
+  @Input() set favorties(value: boolean) {
+      this.onlyFavorites = value ? value : null;
+  };
   constructor(private clientService: ClientService) { }
 
   ngOnInit(): void {
@@ -17,7 +21,7 @@ export class ListSavedPathsComponent implements OnInit {
   }
 
   getDestinationsList() {
-      this.clientService.getDestinationsList()
+      this.clientService.getDestinationsList(this.onlyFavorites)
           .subscribe((result) => {
               this.destinationsList = result;
           }, (error) => {

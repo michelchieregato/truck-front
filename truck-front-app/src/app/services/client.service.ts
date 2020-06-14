@@ -11,8 +11,10 @@ export class ClientService {
     constructor(private http: HttpClient) {
     }
 
-    getDestinationsList() {
-        return this.http.get(this.defaultApi + 'destinations/');
+    getDestinationsList(onlyFavorites) {
+        const params = onlyFavorites ? {is_favorite: 'true'} : {};
+
+        return this.http.get(this.defaultApi + 'destinations/', {params: params});
     }
 
     createDestination(infos: {from_name, from_location, to_name, to_location}) {
