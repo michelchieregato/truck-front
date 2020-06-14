@@ -43,4 +43,8 @@ export class LoginComponent {
     navigateToSignUp() {
         this.router.navigateByUrl('/sign-up');
     }
+
+    navigateToSurrounding() {
+        this.router.navigateByUrl('/surrounding');
+    }
 }
