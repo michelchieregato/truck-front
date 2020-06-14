@@ -1,7 +1,7 @@
 <ListView [items]="placesList" separatorColor="transparent" height="300">
 	<ng-template let-place="item" let-i="index">
 		<StackLayout>
-			<GridLayout rows="auto,auto,auto" columns="100,auto,auto" class="place-item">
+			<GridLayout rows="auto,40,auto" columns="100,auto,auto" class="place-item" height="90">
 				<StackLayout height="70" width="70" backgroundColor="#C4C4C4" row="0" col="0" rowSpan="3"
 				             borderRadius="10px"></StackLayout>
 				<Label row="0" col="1">
