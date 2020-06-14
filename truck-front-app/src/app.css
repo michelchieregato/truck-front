@@ -1,15 +1,3 @@
-/*
-In NativeScript, the app.css file is where you place CSS rules that
-you would like to apply to your entire application. Check out
-http://docs.nativescript.org/ui/styling for a full list of the CSS
-selectors and properties you can use to style UI components.
-
-/*
-In many cases you may want to use the NativeScript core theme instead
-of writing your own CSS rules. You can learn more about the
-NativeScript core theme at https://github.com/nativescript/theme
-The imported CSS rules must precede all other types of rules.
-*/
 @import "~@nativescript/theme/css/core.css";
 @import "~@nativescript/theme/css/default.css";
 
@@ -24,17 +12,114 @@ Button.-primary {
     font-size: 18;
 }
 
-.far {
-    font-family: Font Awesome 5 Free, fa-regular-400;
+@font-face {
+    font-family: 'Rubik Regular';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Regular'), url('./app/fonts/Rubik/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Black';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Black'), url('./app/fonts/Rubik/Rubik-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik BlackItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik BlackItalic'), url('./app/fonts/Rubik/Rubik-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Bold'), url('./app/fonts/Rubik/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik BoldItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik BoldItalic'), url('./app/fonts/Rubik/Rubik-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Italic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Italic'), url('./app/fonts/Rubik/Rubik-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Light';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Light'), url('./app/fonts/Rubik/Rubik-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik LightItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik LightItalic'), url('./app/fonts/Rubik/Rubik-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Medium';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Medium'), url('./app/fonts/Rubik/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik MediumItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik MediumItalic'), url('./app/fonts/Rubik/Rubik-MediumItalic.ttf') format('truetype');
+}
+
+.fa-brands {
+    font-family: "Font Awesome 5 Brands", "fa-brands-400";
     font-weight: 400;
 }
 
-.fab {
-    font-family: Font Awesome 5 Brands, fa-brands-400;
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
     font-weight: 400;
 }
 
 .fas {
     font-family: Font Awesome 5 Free, fa-solid-900;
     font-weight: 900;
+}
+
+Button.-primary {
+    font-size: 18;
+}
+
+* {
+    font-family: 'Rubik Regular', sans-serif;
+}
+
+.btn {
+    background: #F5A623;
+    color: white;
+    width: 70%;
+    height: 32;
+    border-radius: 6px;
+    font-size: 12px;
 }

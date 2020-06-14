@@ -1,0 +1,29 @@
+.head {
+    align-items: flex-start;
+    margin-left: 30
+}
+
+.btn-round {
+    background: #F5A623;
+    border-width: 1;
+    border-color: #F5A623;
+    color: white;
+    width: 75;
+    height: 25;
+    border-radius: 30%;
+    font-size: 9px;
+    margin-left: 0;
+}
+
+.warning {
+    padding-left: 20;
+    font-size: 9px;
+    color: white;
+}
+
+.request {
+    color: #F5A623;
+    background: white;
+    font-weight: bold;
+}
+

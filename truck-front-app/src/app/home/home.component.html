@@ -1,6 +1,27 @@
-<StackLayout>
-	<Label text="{{'Oi, ' + userName + '!'}}"></Label>
-	<Label text="{{'Você tem ' + points + ' pontos. Utilize-os para descansar, tomar um banho ou comer alguma coisa.'}}"></Label>
-	<Button text="Ver detalhes"></Button>
-</StackLayout>
+<FlexboxLayout flexDirection="column" justifyContent="space-between">
+	<FlexboxLayout justifyContent="space-between" alignItems="center" height="100" backgroundColor="#F5A623">
+		<Label class="warning" width="200" textWrap="true"
+				text="Ei, você já está dirigindo há bastante tempo. Que tal parar para descansar?">
+		</Label>
+		<Button text="Quero!" class="btn-round request"></Button>
+	</FlexboxLayout>
+	<FlexboxLayout flexDirection="column" class="head" height="200" justifyContent="space-between">
+		<Label class="h1" [text]="'Oi, ' + userName + '!'" fontWeight="Bold"></Label>
+		<Label textWrap="true" width="270" fontSize="11">
+			<FormattedString>
+				<Span text="Você tem "></Span>
+				<Span [text]="points + ' pontos. '" color="#F5A623"></Span>
+				<Span text="Utilize-os para descansar, tomar um banho ou comer alguma coisa."></Span>
+			</FormattedString>
+		</Label>
+		<Button text="Ver detalhes" class="btn-round"></Button>
+		<Label class="h3" text="O que tem por perto?" fontWeight="Bold"></Label>
+	</FlexboxLayout>
+	<ns-locations-list></ns-locations-list>
+	<FlexboxLayout flexDirection="column" height="130" alignItems="center">
+		<Label class="h3" text="Quer ver o que tem disponível no seu trajeto?"></Label>
+		<Button text="Selecionar trajeto" class="btn"></Button>
+	</FlexboxLayout>
+</FlexboxLayout>
+
 

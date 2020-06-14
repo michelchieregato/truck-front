@@ -9,6 +9,7 @@
         "skipLibCheck": true,
         "lib": [
             "es6",
+            "es2018",
             "dom",
             "es2015.iterable"
         ],

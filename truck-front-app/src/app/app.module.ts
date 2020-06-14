@@ -9,6 +9,7 @@ import { PasswordRecoveryComponent } from "./password-recovery/password-recovery
 import { SignUpComponent } from "./sign-up/sign-up.component";
 import { HomeComponent } from "./home/home.component";
 import { SurroundingsComponent } from './surroundings/surroundings.component';
+import { LocationsListComponent } from './locations-list/locations-list.component';
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
@@ -28,7 +29,8 @@ import { SurroundingsComponent } from './surroundings/surroundings.component';
         PasswordRecoveryComponent,
         SignUpComponent,
         HomeComponent,
-        SurroundingsComponent
+        SurroundingsComponent,
+        LocationsListComponent
     ],
     providers: [],
     schemas: [

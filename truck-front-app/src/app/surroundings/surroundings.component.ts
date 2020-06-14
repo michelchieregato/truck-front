@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./surroundings.component.css']
 })
 export class SurroundingsComponent implements OnInit {
+    type: string = 'health';
 
     constructor() {
     }
@@ -13,12 +14,8 @@ export class SurroundingsComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    show(item): void {
-        console.log(item);
-    }
-
-    clickL1() {
-        alert('hi')
+    getNearLocationsOfType(type: string) {
+        this.type = type;
     }
 
 }
