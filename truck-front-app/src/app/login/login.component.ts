@@ -18,7 +18,6 @@ export class LoginComponent {
     }
 
     submitUserInfo() {
-        console.log('mandando');
         this.sending = true;
         this.clientService.login({email: this.email, password: this.password}).subscribe(
             (response) => {

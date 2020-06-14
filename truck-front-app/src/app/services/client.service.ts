@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
     providedIn: 'root'
 })
 export class ClientService {
-    defaultApi = 'http://0.0.0.0:8000/'
+    defaultApi = 'http://0.0.0.0:8000/';
 
     constructor(private http: HttpClient) {
     }
