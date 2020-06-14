@@ -121,6 +121,7 @@ Button.-primary {
     color: white;
     width: 70%;
     height: 32;
-    border-radius: 6px;
+    border-radius: 6;
     font-size: 12px;
+    font-weight: bold;
 }

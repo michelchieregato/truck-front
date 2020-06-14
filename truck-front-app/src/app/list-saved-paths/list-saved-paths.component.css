@@ -1,0 +1,12 @@
+.favorite-path {
+    color: #35499F;
+}
+
+.destination-item {
+    border-width: 1;
+    align-items: center;
+    justify-items: center;
+    border-color: rgba(139, 139, 139, 0.25);
+    margin: 2 20;
+    padding: 5 10;
+}

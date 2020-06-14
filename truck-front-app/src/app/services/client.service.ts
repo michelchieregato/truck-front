@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+
 
 @Injectable({
     providedIn: 'root'
@@ -12,5 +13,9 @@ export class ClientService {
 
     login(auth: {email, password}) {
         return this.http.post(this.defaultApi + 'user/token/', auth);
+    }
+
+    getDestinationsList() {
+        return this.http.get(this.defaultApi + 'destinations/');
     }
 }

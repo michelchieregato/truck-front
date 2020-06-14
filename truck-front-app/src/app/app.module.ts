@@ -14,6 +14,9 @@ import { LocationsListComponent } from './locations-list/locations-list.componen
 import { CreateTripComponent } from './create-trip/create-trip.component';
 import { ListSavedPathsComponent } from './list-saved-paths/list-saved-paths.component';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './services/token.interceptor';
+
 
 @NgModule({
     bootstrap: [
@@ -38,7 +41,13 @@ import { ListSavedPathsComponent } from './list-saved-paths/list-saved-paths.com
         CreateTripComponent,
         ListSavedPathsComponent
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptor,
+            multi: true
+        }
+    ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]

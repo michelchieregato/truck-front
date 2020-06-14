@@ -4,7 +4,8 @@ import {Input} from "@angular/core";
 @Component({
     selector: 'ns-locations-list',
     templateUrl: './locations-list.component.html',
-    styleUrls: ['./locations-list.component.css']
+    styleUrls: ['./locations-list.component.css'],
+    moduleId: module.id
 })
 export class LocationsListComponent implements OnInit {
     _type: string;
