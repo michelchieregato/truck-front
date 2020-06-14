@@ -6,11 +6,7 @@
 		<Button text="Quero!" class="btn-round request"></Button>
 	</FlexboxLayout>
 	<FlexboxLayout flexDirection="column" class="head" height="200" justifyContent="space-between">
-		<Label class="h1">
-			<FormattedString>
-				<Span [text]="'Oi, ' + userName + '!'" fontWeight="Bold"></Span>
-			</FormattedString>
-		</Label>
+		<Label class="h1" [text]="'Oi, ' + userName + '!'" fontWeight="Bold"></Label>
 		<Label textWrap="true" width="270" fontSize="11">
 			<FormattedString>
 				<Span text="Você tem "></Span>
@@ -19,11 +15,7 @@
 			</FormattedString>
 		</Label>
 		<Button text="Ver detalhes" class="btn-round"></Button>
-		<Label class="h3">
-			<FormattedString>
-				<Span text="O que tem por perto?" fontWeight="Bold"></Span>
-			</FormattedString>
-		</Label>
+		<Label class="h3" text="O que tem por perto?" fontWeight="Bold"></Label>
 	</FlexboxLayout>
 	<ListView [items]="placesList" separatorColor="transparent" height="300">
 		<ng-template let-place="item" let-i="index">
