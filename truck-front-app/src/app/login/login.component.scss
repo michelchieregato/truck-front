@@ -15,7 +15,6 @@
 }
 
 .login-title {
-  font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 20;
@@ -23,12 +22,14 @@
 }
 
 .login-subtitle {
-  margin-top: 10;
-  font-size: 14;
+  margin-top: 5;
+  font-size: 12;
   color: #41444F;
 }
 
 .nt-form {
+  margin-top: 10;
+
   .nt-input {
     margin: 0;
     padding: 0;
@@ -41,4 +42,7 @@
     margin: 0;
   }
 
+  .btn {
+    width: 100%;
+  }
 }
