@@ -7,7 +7,7 @@ import {Input} from "@angular/core";
     styleUrls: ['./locations-list.component.css']
 })
 export class LocationsListComponent implements OnInit {
-    _type: string;
+    private _type: string;
     placesList: any;
 
     @Input() set type(value: string) {

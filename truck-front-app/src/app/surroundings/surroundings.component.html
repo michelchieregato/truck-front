@@ -1,5 +1,7 @@
 <StackLayout>
-	<Label class="map" text="map will be here"></Label>
+	<GridLayout class="map">
+		<MapView [latitude]="latitude" [longitude]="longitude" [zoom]="zoom"></MapView>
+	</GridLayout>
 	<Label text="O que você tem por perto?" class="locations-title"></Label>
 	<FlexboxLayout class="locations-type">
 		<StackLayout (tap)="getNearLocationsOfType('health')">

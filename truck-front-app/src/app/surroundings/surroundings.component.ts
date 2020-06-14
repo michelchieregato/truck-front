@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {registerElement} from "nativescript-angular/element-registry";
+registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
 @Component({
     selector: 'ns-surroundings',
@@ -7,6 +9,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SurroundingsComponent implements OnInit {
     type: string = 'health';
+    latitude = -23.350396;
+    longitude = -46.797085;
+    zoom = 15;
+    bearing = 180;
+    tilt = 35;
+    padding = [80, 40, 40, 40];
+    mapAnimationsEnabled = true;
 
     constructor() {
     }
