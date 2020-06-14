@@ -1,1 +1,18 @@
-/* Add mobile styles for the component here.  */
+.map {
+    height: 200;
+    border-color: blue;
+    border-width: 5;
+}
+
+.locations-type {
+    justify-content: space-between;
+    margin: 5 10;
+}
+
+.location-type-images {
+    width: 60;
+}
+
+.surroundings {
+    font-family: 'Rubik Regular', sans-serif;
+}

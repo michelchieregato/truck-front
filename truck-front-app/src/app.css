@@ -6,7 +6,11 @@ selectors and properties you can use to style UI components.
 
 /*
 In many cases you may want to use the NativeScript core theme instead
+<<<<<<< HEAD
 of writing your own CSS rules. You can learn more about the 
+=======
+of writing your own CSS rules. You can learn more about the
+>>>>>>> 03d1b1d4f5b0aaf998084e775d72821c3a81bbf1
 NativeScript core theme at https://github.com/nativescript/theme
 The imported CSS rules must precede all other types of rules.
 */
@@ -20,6 +24,92 @@ This is where the vast majority of your CSS code goes. */
 The following CSS rule changes the font size of all Buttons that have the
 "-primary" class modifier.
 */
+
+@font-face {
+    font-family: 'Rubik Regular';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Regular'), url('./fonts/Rubik/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Black';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Black'), url('./fonts/Rubik/Rubik-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik BlackItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik BlackItalic'), url('./fonts/Rubik/Rubik-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Bold'), url('./fonts/Rubik/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik BoldItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik BoldItalic'), url('./fonts/Rubik/Rubik-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Italic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Italic'), url('./fonts/Rubik/Rubik-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Light';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Light'), url('./fonts/Rubik/Rubik-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik LightItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik LightItalic'), url('./fonts/Rubik/Rubik-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Medium';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik Medium'), url('./fonts/Rubik/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik MediumItalic';
+    font-display: fallback;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rubik MediumItalic'), url('./fonts/Rubik/Rubik-MediumItalic.ttf') format('truetype');
+}
+
+
 Button.-primary {
     font-size: 18;
+}
+
+* {
+    font-family: 'Rubik Regular', sans-serif;
 }

@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'ns-surroundings',
-  templateUrl: './surroundings.component.html',
-  styleUrls: ['./surroundings.component.css']
+    selector: 'ns-surroundings',
+    templateUrl: './surroundings.component.html',
+    styleUrls: ['./surroundings.component.css']
 })
 export class SurroundingsComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+
+    show(item): void {
+        console.log(item);
+    }
+
+    clickL1() {
+        alert('hi')
+    }
 
 }
