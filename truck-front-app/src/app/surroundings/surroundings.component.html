@@ -1,6 +1,6 @@
-<StackLayout>
+<StackLayout *ngIf="ready">
 	<GridLayout class="map">
-		<MapView [latitude]="latitude" [longitude]="longitude" [zoom]="zoom"></MapView>
+		<MapView [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapReady)="setMarker($event)"></MapView>
 	</GridLayout>
 	<ns-locations-filter [text]="'O que tem por perto?'"></ns-locations-filter>
 </StackLayout>
