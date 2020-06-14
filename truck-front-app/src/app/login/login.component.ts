@@ -22,7 +22,8 @@ export class LoginComponent {
         this.sending = true;
         this.userService.login({email: this.email, password: this.password}).subscribe(
             (response: any) => {
-                const user = new User(response.name, response.email, response.token);
+                console.log(response);
+                const user = new User(response.user.name, response.user.email, response.user.phone, response.token);
                 this.userService.currentUserSubject.next(user);
                 this.router.navigateByUrl('/home');
                 this.sending = false;
