@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -10,9 +11,9 @@ import { SignUpComponent } from "./sign-up/sign-up.component";
 import { HomeComponent } from "./home/home.component";
 import { SurroundingsComponent } from './surroundings/surroundings.component';
 import { LocationsListComponent } from './locations-list/locations-list.component';
+import { CreateTripComponent } from './create-trip/create-trip.component';
+import { ListSavedPathsComponent } from './list-saved-paths/list-saved-paths.component';
 
-// Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
-// import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 @NgModule({
     bootstrap: [
@@ -21,6 +22,7 @@ import { LocationsListComponent } from './locations-list/locations-list.componen
     imports: [
         NativeScriptModule,
         NativeScriptFormsModule,
+        NativeScriptHttpClientModule,
         AppRoutingModule
     ],
     declarations: [
@@ -30,7 +32,9 @@ import { LocationsListComponent } from './locations-list/locations-list.componen
         SignUpComponent,
         HomeComponent,
         SurroundingsComponent,
-        LocationsListComponent
+        LocationsListComponent,
+        CreateTripComponent,
+        ListSavedPathsComponent
     ],
     providers: [],
     schemas: [

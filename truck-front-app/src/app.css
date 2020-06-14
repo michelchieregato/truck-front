@@ -121,6 +121,7 @@ The following CSS rule changes the font size of all Buttons that have the
 .fas {
     font-family: "Font Awesome 5 Free", "fa-solid-900";
     font-weight: 900;
+    color: #C4C4C4;
 }
 
 Button.-primary {
