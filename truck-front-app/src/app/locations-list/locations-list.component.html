@@ -1,0 +1,22 @@
+<ListView [items]="placesList" separatorColor="transparent" height="300">
+	<ng-template let-place="item" let-i="index">
+		<StackLayout>
+			<GridLayout rows="auto,auto,auto" columns="100,auto,auto" class="place-item">
+				<StackLayout height="70" width="70" backgroundColor="#C4C4C4" row="0" col="0" rowSpan="3"
+				             borderRadius="10px"></StackLayout>
+				<Label row="0" col="1">
+					<FormattedString>
+						<Span [text]="place.name + '  '" fontWeight="Bold"></Span>
+						<Span [text]="place.distance" color="#F5A623"></Span>
+					</FormattedString>
+				</Label>
+				<Label [text]="place.services" row="1" col="1" textWrap="true" width="180"
+				       color="#8B8B8B"></Label>
+				<FlexboxLayout row="2" col="1">
+					<Label *ngFor="let _ of [].constructor(place.rating)" class="fas" style="font-size: 11; color: #F5A623" text="&#xf005;"></Label>
+					<Label *ngFor="let _ of [].constructor(5 - place.rating)" class="fas" style="font-size: 11; color: #C4C4C4;" text="&#xf005;"></Label>
+				</FlexboxLayout>
+			</GridLayout>
+		</StackLayout>
+	</ng-template>
+</ListView>
