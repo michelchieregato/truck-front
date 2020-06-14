@@ -19,6 +19,9 @@ import { TokenInterceptor } from './services/token.interceptor';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { LocationsFilterComponent } from './locations-filter/locations-filter.component';
 
+import * as platform from "platform";
+declare var GMSServices: any;
+
 
 @NgModule({
     bootstrap: [
@@ -59,4 +62,11 @@ import { LocationsFilterComponent } from './locations-filter/locations-filter.co
 /*
 Pass your application module to the bootstrapModule function located in main.ts to start your app
 */
-export class AppModule { }
+export class AppModule {
+
+}
+
+if (platform.isIOS) {
+    GMSServices.provideAPIKey("AIzaSyAqXUmjnv0haVhEW0KJQOMHs3BA7sIbdzI");
+}
+
