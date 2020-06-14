@@ -3,6 +3,7 @@ import {registerElement} from "nativescript-angular/element-registry";
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 import * as Geolocation from 'nativescript-geolocation';
 import { Accuracy } from "tns-core-modules/ui/enums";
+import {isEnabled} from "nativescript-geolocation";
 
 
 @Component({
@@ -23,9 +24,17 @@ export class SurroundingsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log('try');
-        Geolocation.enableLocationRequest(true).then((isLocationEnabled) => {
-            console.log(isLocationEnabled);
+        Geolocation.enableLocationRequest(true).then(() => {
+            Geolocation.isEnabled().then((isEnabled) => {
+                if (isEnabled) {
+                    Geolocation.getCurrentLocation({timeout: 5000}).then((location) => {
+                        this.longitude = location.longitude;
+                        this.latitude = location.latitude;
+                    }).catch(e => {
+                        alert('Não localizamos você! Tente de novo mais tarder');
+                    });
+                }
+            });
         });
     }
 }

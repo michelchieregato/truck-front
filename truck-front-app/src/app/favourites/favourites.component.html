@@ -1,11 +1,11 @@
 <StackLayout>
 	<Label text="Meus favoritos" class="title"></Label>
-	<TabView>
+	<TabView selectedTabTextColor="#F5A623" androidSelectedTabHighlightColor="#F5A623">
 		<StackLayout *tabItem="{title: 'Locais'}">
 			<ns-locations-filter [text]="'Filtrar por:'" [favorties]="true"></ns-locations-filter>
 		</StackLayout>
 		<StackLayout *tabItem="{title: 'Trajetos'}">
-			<StackLayout class="m-t-10"]>
+			<StackLayout class="m-t-10">
 				<ns-list-saved-paths [favorties]="true"></ns-list-saved-paths>
 			</StackLayout>
 		</StackLayout>
