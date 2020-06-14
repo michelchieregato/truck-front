@@ -1,11 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Input} from "@angular/core";
 
 @Component({
-  selector: 'ns-locations-list',
-  templateUrl: './locations-list.component.html',
-  styleUrls: ['./locations-list.component.css']
+    selector: 'ns-locations-list',
+    templateUrl: './locations-list.component.html',
+    styleUrls: ['./locations-list.component.css']
 })
 export class LocationsListComponent implements OnInit {
+    _type: string;
+
+    @Input() set type(value: string) {
+        this._type = value;
+    };
+
+    get type(): string {
+        return this._type;
+    }
+
     placesList = [
         {
             name: "Posto BR 24h",
@@ -27,9 +38,13 @@ export class LocationsListComponent implements OnInit {
         }
     ];
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        // setTimeout(() => {
+        //     console.log(this.type);
+        // }, 1000)
+    }
 
 }
