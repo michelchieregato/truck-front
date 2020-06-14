@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Input} from "@angular/core";
 import {Place, PlaceService} from "~/app/services/place.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'ns-locations-list',
@@ -56,7 +57,7 @@ export class LocationsListComponent implements OnInit {
         }
     ];
 
-    constructor(private placeService: PlaceService) {
+    constructor(private router: Router, private placeService: PlaceService) {
     }
 
     ngOnInit(): void {
@@ -78,6 +79,6 @@ export class LocationsListComponent implements OnInit {
     evaluatePlace(place: any) {
         const newPlace = new Place(place.name, place.distance, place.services, place.rating, place.types);
         this.placeService.currentPlaceSubject.next(newPlace);
+        this.router.navigateByUrl('/evaluate');
     }
-
 }
