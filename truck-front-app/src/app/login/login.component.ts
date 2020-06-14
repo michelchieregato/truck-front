@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {Router} from '@angular/router';
-import {UserService} from "~/app/services/user.service";
+import {User, UserService} from "~/app/services/user.service";
 import {alert} from "tns-core-modules/ui/dialogs";
 
 @Component({
@@ -21,8 +21,10 @@ export class LoginComponent {
     submitUserInfo() {
         this.sending = true;
         this.userService.login({email: this.email, password: this.password}).subscribe(
-            (response) => {
-                console.log(response);
+            (response: any) => {
+                const user = new User(response.name, response.email, response.token);
+                this.userService.currentUserSubject.next(user);
+                this.router.navigateByUrl('/home');
                 this.sending = false;
             },
             (err) => {
