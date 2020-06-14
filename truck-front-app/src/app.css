@@ -125,3 +125,10 @@ Button.-primary {
     font-size: 12px;
     font-weight: bold;
 }
+
+.title {
+    margin-left: 20;
+    margin-top: 10;
+    font-size: 25;
+    font-weight: bold;
+}

@@ -16,6 +16,7 @@ import { ListSavedPathsComponent } from './list-saved-paths/list-saved-paths.com
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { TokenInterceptor } from './services/token.interceptor';
         SurroundingsComponent,
         LocationsListComponent,
         CreateTripComponent,
-        ListSavedPathsComponent
+        ListSavedPathsComponent,
+        FavouritesComponent
     ],
     providers: [
         {
