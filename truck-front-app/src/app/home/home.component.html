@@ -39,14 +39,17 @@
 					</Label>
 					<Label [text]="place.services" row="1" col="1" textWrap="true" width="180"
 							color="#8B8B8B"></Label>
-					<Label [text]="place.rating" row="2" col="1"></Label>
+					<FlexboxLayout row="2" col="1">
+						<Label *ngFor="let _ of [].constructor(place.rating)" class="fas" style="font-size: 11; color: #F5A623" text="&#xf005;"></Label>
+						<Label *ngFor="let _ of [].constructor(5 - place.rating)" class="fas" style="font-size: 11; color: #C4C4C4;" text="&#xf005;"></Label>
+					</FlexboxLayout>
 				</GridLayout>
 			</StackLayout>
 		</ng-template>
 	</ListView>
-	<FlexboxLayout flexDirection="column" height="120" alignItems="center">
+	<FlexboxLayout flexDirection="column" height="130" alignItems="center">
 		<Label class="h3" text="Quer ver o que tem disponível no seu trajeto?"></Label>
-		<Button text="Selecionar trajeto" class="btn-round"></Button>
+		<Button text="Selecionar trajeto" class="btn"></Button>
 	</FlexboxLayout>
 </FlexboxLayout>
 
