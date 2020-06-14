@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {Router} from '@angular/router';
-import {ClientService} from "~/app/services/client.service";
 import {UserService} from "~/app/services/user.service";
+import {alert} from "tns-core-modules/ui/dialogs";
 
 @Component({
     selector: 'login',
@@ -26,7 +26,7 @@ export class LoginComponent {
                 this.sending = false;
             },
             (err) => {
-                console.log(err);
+                alert('Usuário ou senhas erradas.')
                 this.sending = false;
             }
         )

@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
-import { Router } from '@angular/router';
+import {Component} from "@angular/core";
+import {Router} from '@angular/router';
 import {UserService} from "~/app/services/user.service";
+import {alert} from "tns-core-modules/ui/dialogs";
 
 @Component({
     selector: 'sign-up',
@@ -10,7 +11,8 @@ import {UserService} from "~/app/services/user.service";
 })
 
 export class SignUpComponent {
-    constructor(private router: Router, private userService: UserService) {}
+    constructor(private router: Router, private userService: UserService) {
+    }
 
     email = '';
     password = '';
@@ -22,10 +24,9 @@ export class SignUpComponent {
 
     submitUserInfo() {
         this.sending = true;
-        console.log('clickando!!')
 
         if (this.password !== this.confirmPassword) {
-            console.error('As senhas não dão são iguais');
+            alert('As senhas não são iguais');
             return;
         }
 
@@ -39,20 +40,22 @@ export class SignUpComponent {
             name: this.name,
         }).subscribe(
             (response) => {
-                console.log(response);
+                alert('Usuário criado com sucesso! Já pode fazer login');
+                this.navigateToLogin();
                 this.sending = false;
             },
             (err) => {
+                alert('Não foi possível fazer a autenticação, verifique se os campos estão corretos.');
                 this.sending = false;
             }
         )
     }
 
     navigateToLogin() {
-       this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/login');
     }
 
     navigateToPasswordRecovery() {
-       this.router.navigateByUrl('/password-recovery');
+        this.router.navigateByUrl('/password-recovery');
     }
 }
