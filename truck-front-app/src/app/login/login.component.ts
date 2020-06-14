@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {Router} from '@angular/router';
-import {ClientService} from "~/app/services/client.service";
+import {UserService} from "~/app/services/user.service";
+import {alert} from "tns-core-modules/ui/dialogs";
 
 @Component({
     selector: 'login',
@@ -14,17 +15,19 @@ export class LoginComponent {
     password = '';
     sending = false;
 
-    constructor(private router: Router, private clientService: ClientService) {
+    constructor(private router: Router, private userService: UserService) {
     }
 
     submitUserInfo() {
         this.sending = true;
-        this.clientService.login({email: this.email, password: this.password}).subscribe(
+        this.userService.login({email: this.email, password: this.password}).subscribe(
             (response) => {
                 console.log(response);
+                this.sending = false;
             },
             (err) => {
-                console.log(err);
+                alert('Usuário ou senhas erradas.')
+                this.sending = false;
             }
         )
     }
