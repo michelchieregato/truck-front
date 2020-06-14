@@ -11,10 +11,6 @@ export class ClientService {
     constructor(private http: HttpClient) {
     }
 
-    login(auth: {email, password}) {
-        return this.http.post(this.defaultApi + 'user/token/', auth);
-    }
-
     getDestinationsList() {
         return this.http.get(this.defaultApi + 'destinations/');
     }

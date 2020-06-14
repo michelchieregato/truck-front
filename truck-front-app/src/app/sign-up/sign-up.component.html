@@ -25,11 +25,11 @@
 				</StackLayout>
 
 				<StackLayout class="nt-input">
-					<TextField class="-border text-left text-input" [(ngModel)]="password" hint="Confirme sua senha" secure="true"
+					<TextField class="-border text-left text-input" [(ngModel)]="confirmPassword" hint="Confirme sua senha" secure="true"
 							   keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
 				</StackLayout>
 
-				<Button text="Login" class="btn btn-primary" (tap)="submitUserInfo()"></Button>
+				<Button text="Login" class="btn btn-primary" [isEnabled]="!sending"  (tap)="submitUserInfo()"></Button>
 			</StackLayout>
 		</FlexboxLayout>
 		<FlexboxLayout class="not-account">

@@ -8,7 +8,7 @@ import {Input} from "@angular/core";
     moduleId: module.id
 })
 export class LocationsListComponent implements OnInit {
-    _type: string;
+    private _type: string;
     placesList: any;
 
     @Input() set type(value: string) {
