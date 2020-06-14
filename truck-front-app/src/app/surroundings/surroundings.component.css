@@ -13,6 +13,18 @@
     width: 60;
 }
 
-.surroundings {
-    font-family: 'Rubik Regular', sans-serif;
+.location-type-images + Label {
+    text-align: center;
+}
+
+.locations-title {
+    font-weight: bold;
+    font-size: 15;
+    margin: 5 10;
+}
+
+.location-type-clicked {
+    border-color: #35499F;
+    border-width: 2;
+    border-radius: 10;
 }
