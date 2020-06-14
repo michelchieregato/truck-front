@@ -19,7 +19,7 @@ import { TokenInterceptor } from './services/token.interceptor';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { LocationsFilterComponent } from './locations-filter/locations-filter.component';
 
-import * as platform from "platform";
+import { isAndroid, isIOS, device, screen } from "tns-core-modules/platform";
 declare var GMSServices: any;
 
 
@@ -66,7 +66,7 @@ export class AppModule {
 
 }
 
-if (platform.isIOS) {
+if (isIOS) {
     GMSServices.provideAPIKey("AIzaSyAqXUmjnv0haVhEW0KJQOMHs3BA7sIbdzI");
 }
 
