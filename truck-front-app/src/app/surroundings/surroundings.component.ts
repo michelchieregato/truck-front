@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {registerElement} from "nativescript-angular/element-registry";
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
+import * as Geolocation from 'nativescript-geolocation';
+import { Accuracy } from "tns-core-modules/ui/enums";
+
 
 @Component({
     selector: 'ns-surroundings',
@@ -21,6 +24,10 @@ export class SurroundingsComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        console.log('try');
+        Geolocation.enableLocationRequest(true).then((isLocationEnabled) => {
+            console.log(isLocationEnabled);
+        });
     }
 
     getNearLocationsOfType(type: string) {
