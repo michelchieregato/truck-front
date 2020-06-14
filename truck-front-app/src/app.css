@@ -7,7 +7,11 @@ selectors and properties you can use to style UI components.
 /*
 In many cases you may want to use the NativeScript core theme instead
 <<<<<<< HEAD
+<<<<<<< HEAD
 of writing your own CSS rules. You can learn more about the 
+=======
+of writing your own CSS rules. You can learn more about the
+>>>>>>> 03d1b1d4f5b0aaf998084e775d72821c3a81bbf1
 =======
 of writing your own CSS rules. You can learn more about the
 >>>>>>> 03d1b1d4f5b0aaf998084e775d72821c3a81bbf1
@@ -24,7 +28,6 @@ This is where the vast majority of your CSS code goes. */
 The following CSS rule changes the font size of all Buttons that have the
 "-primary" class modifier.
 */
-
 @font-face {
     font-family: 'Rubik Regular';
     font-display: fallback;
