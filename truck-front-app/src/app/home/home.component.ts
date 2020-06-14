@@ -11,7 +11,6 @@ import {User, UserService} from "~/app/services/user.service";
 
 export class HomeComponent implements OnInit {
     user: User;
-    points = 524;
 
     constructor(private router: Router, private userService: UserService) {
     }

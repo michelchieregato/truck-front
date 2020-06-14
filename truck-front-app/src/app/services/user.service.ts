@@ -26,13 +26,15 @@ export class User {
     name: string;
     phone: string;
     email: string;
+    points: number;
     token: string;
 
 
-    constructor(name, email, phone, token) {
+    constructor(name, email, phone, points, token) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.points = points;
         this.token = token;
     }
 }
