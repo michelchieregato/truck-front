@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
-import { Router } from '@angular/router';
+import {Component, OnInit} from "@angular/core";
+import {Router} from '@angular/router';
+import {User, UserService} from "~/app/services/user.service";
 
 @Component({
     selector: 'home',
@@ -8,12 +9,18 @@ import { Router } from '@angular/router';
     moduleId: module.id
 })
 
-export class HomeComponent {
-    constructor(private router: Router) {}
-    userName = 'Zé';
-    points = 524;
+export class HomeComponent implements OnInit {
+    user: User;
+
+    constructor(private router: Router, private userService: UserService) {
+    }
+
+    ngOnInit() {
+        this.user = this.userService.currentUserSubject.getValue();
+        console.log(this.user);
+    }
 
     navigateToLogin() {
-       this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/login');
     }
 }

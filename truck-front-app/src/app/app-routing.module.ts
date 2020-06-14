@@ -12,7 +12,7 @@ import { FavouritesComponent } from './favourites/favourites.component';
 
 
 const routes: Routes = [
-    { path: "", redirectTo: "/home", pathMatch: "full" },
+    { path: "", redirectTo: "/login", pathMatch: "full" },
     { path: "login", component: LoginComponent },
     { path: "password-recovery", component: PasswordRecoveryComponent },
     { path: "sign-up", component: SignUpComponent },
