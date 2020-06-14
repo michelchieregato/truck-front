@@ -8,33 +8,49 @@ import {Input} from "@angular/core";
 })
 export class LocationsListComponent implements OnInit {
     _type: string;
+    placesList: any;
 
     @Input() set type(value: string) {
         this._type = value;
+        this.getLocations();
     };
 
     get type(): string {
         return this._type;
     }
 
-    placesList = [
+    placesListMock = [
         {
             name: "Posto BR 24h",
-            distance: "250m",
+            distance: 250,
+            distanceDisplay: '250m',
             services: "Abastecimento, Banheiro, Chuveiro, alimentação",
-            rating: 4
+            rating: 4,
+            types: ['food', 'hygiene']
+        },
+        {
+            name: "Einstein",
+            distance: 2540,
+            distanceDisplay: '2540m',
+            services: "Abastecimento, Banheiro, Chuveiro, alimentação",
+            rating: 4,
+            types: ['food', 'health']
         },
         {
             name: "Posto de saúde UBS",
-            distance: "250m",
-            services: "Abastecimento, Banheiro, Chuveiro, alimentação",
-            rating: 4
+            distanceDisplay: "250m",
+            distance: 250,
+            services: "Hospital/posto de saúde",
+            rating: 4,
+            types: ['health']
         },
         {
             name: "Posto da Policia Federal",
-            distance: "1,5km",
-            services: "Abastecimento, Banheiro, Chuveiro, alimentação",
-            rating: 2
+            distanceDisplay: "1,5km",
+            distance: 1500,
+            services: "Policiamento",
+            rating: 2,
+            types: ['safety']
         }
     ];
 
@@ -42,9 +58,18 @@ export class LocationsListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        // setTimeout(() => {
-        //     console.log(this.type);
-        // }, 1000)
+    }
+
+    private getLocations() {
+        // back integration
+        this.placesList = this.placesListMock;
+        if (this.type) {
+            this.placesList = this.placesListMock.filter((place) => {
+                return place.types.includes(this.type);
+            }).sort((a, b) => {
+                return a.distance < b.distance ? -1 : 1;
+            });
+        }
     }
 
 }

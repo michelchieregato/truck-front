@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
-import { Router } from '@angular/router';
+import {Component} from "@angular/core";
+import {Router} from '@angular/router';
+import {ClientService} from "~/app/services/client.service";
 
 @Component({
     selector: 'login',
@@ -9,19 +10,30 @@ import { Router } from '@angular/router';
 })
 
 export class LoginComponent {
-    constructor(private router: Router) {}
     email = '';
     password = '';
+    sending = false;
+
+    constructor(private router: Router, private clientService: ClientService) {
+    }
 
     submitUserInfo() {
-        console.log('clickando!!')
+        this.sending = true;
+        this.clientService.login({email: this.email, password: this.password}).subscribe(
+            (response) => {
+                console.log(response);
+            },
+            (err) => {
+                console.log(err);
+            }
+        )
     }
 
     navigateToPasswordRecovery() {
-       this.router.navigateByUrl('/password-recovery');
+        this.router.navigateByUrl('/password-recovery');
     }
 
     navigateToSignUp() {
-       this.router.navigateByUrl('/sign-up');
+        this.router.navigateByUrl('/sign-up');
     }
 }

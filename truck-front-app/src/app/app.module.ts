@@ -23,7 +23,9 @@ import { ListSavedPathsComponent } from './list-saved-paths/list-saved-paths.com
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptHttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        AppRoutingModule,
+        NativeScriptHttpClientModule
     ],
     declarations: [
         AppComponent,

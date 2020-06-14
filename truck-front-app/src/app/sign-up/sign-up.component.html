@@ -1,15 +1,40 @@
-<StackLayout>
-	<Label text="Faça um cadastro"></Label>
-	<Label text="Crie uma conta, junte pontos e troque por benefícios!"></Label>
-	<TextField [(ngModel)]="name" hint="Qual o seu nome?"></TextField>
-	<TextField [(ngModel)]="phoneNumber" hint="Qual seu número de telefone?"></TextField>
-	<TextField [(ngModel)]="email" hint="Insira seu email"></TextField>
-	<TextField [(ngModel)]="password" hint="Senha"></TextField>
-	<TextField [(ngModel)]="confirmPassword" hint="Confirme sua senha"></TextField>
-	<Label text="Esqueceu sua senha?" (tap)="navigateToPasswordRecovery()"></Label>
-	<Button (tap)="submitUserInfo()"
-			text="Cadastre-se">
-	</Button>
-	<Label text="Já tem uma conta?'"></Label>
-	<Label text="Faça login" (tap)="navigateToLogin()"></Label>
+<StackLayout class="login-screen">
+	<FlexboxLayout class="white-div">
+		<FlexboxLayout class="first-part">
+			<Label class="login-title" text="Faça um cadastro"></Label>
+			<Label class="login-subtitle" text="Crie uma conta, junte pontos e troque por benefícios!"></Label>
+			<StackLayout class="nt-form">
+				<StackLayout class="nt-input">
+					<TextField class="-border text-left text-input" [(ngModel)]="name" hint="Qual o seu nome?"
+							   autocorrect="false"></TextField>
+				</StackLayout>
+
+				<StackLayout class="nt-input">
+					<TextField class="-border text-left text-input" [(ngModel)]="phoneNumber" hint="Seu número de celular"
+							   keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+				</StackLayout>
+
+				<StackLayout class="nt-input">
+					<TextField class="-border text-left text-input" [(ngModel)]="email" hint="Insira seu email"
+							   keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+				</StackLayout>
+
+				<StackLayout class="nt-input">
+					<TextField class="-border text-left text-input" [(ngModel)]="password" hint="Crie uma senha" secure="true"
+							   keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+				</StackLayout>
+
+				<StackLayout class="nt-input">
+					<TextField class="-border text-left text-input" [(ngModel)]="password" hint="Confirme sua senha" secure="true"
+							   keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+				</StackLayout>
+
+				<Button text="Login" class="btn btn-primary" (tap)="submitUserInfo()"></Button>
+			</StackLayout>
+		</FlexboxLayout>
+		<FlexboxLayout class="not-account">
+			<Label class="still-not" text="Já tem uma conta?  "></Label>
+			<Label class="sign-in" text="Faça login" (tap)="navigateToLogin()"></Label>
+		</FlexboxLayout>
+	</FlexboxLayout>
 </StackLayout>
