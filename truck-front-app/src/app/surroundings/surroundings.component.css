@@ -1,15 +1,5 @@
-.stack {
-    border-color: green;
-    border-width: 5;
-    padding: 10;
-    height: 300;
-    margin: 0;
-    align-items: flex-start;
-}
-
-Label {
-    border-width: 10;
+.map {
+    height: 200;
     border-color: blue;
-    text-align: center;
-    width: 100;
+    border-width: 5;
 }
