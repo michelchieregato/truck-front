@@ -105,6 +105,7 @@ Button.-primary {
 .fas {
     font-family: Font Awesome 5 Free, fa-solid-900;
     font-weight: 900;
+    color: #C4C4C4;
 }
 
 Button.-primary {
@@ -120,6 +121,7 @@ Button.-primary {
     color: white;
     width: 70%;
     height: 32;
-    border-radius: 6px;
+    border-radius: 6;
     font-size: 12px;
+    font-weight: bold;
 }
