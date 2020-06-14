@@ -13,7 +13,7 @@ import {EvaluateComponent} from "~/app/evaluate/evaluate.component";
 
 
 const routes: Routes = [
-    {path: "", redirectTo: "/evaluate", pathMatch: "full"},
+    {path: "", redirectTo: "/login", pathMatch: "full"},
     {path: "login", component: LoginComponent},
     {path: "password-recovery", component: PasswordRecoveryComponent},
     {path: "sign-up", component: SignUpComponent},
