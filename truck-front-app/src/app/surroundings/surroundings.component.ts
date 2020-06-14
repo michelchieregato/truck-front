@@ -11,7 +11,6 @@ import { Accuracy } from "tns-core-modules/ui/enums";
     styleUrls: ['./surroundings.component.css']
 })
 export class SurroundingsComponent implements OnInit {
-    type: string = 'health';
     latitude = -23.350396;
     longitude = -46.797085;
     zoom = 15;
@@ -29,9 +28,4 @@ export class SurroundingsComponent implements OnInit {
             console.log(isLocationEnabled);
         });
     }
-
-    getNearLocationsOfType(type: string) {
-        this.type = type;
-    }
-
 }

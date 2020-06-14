@@ -1,0 +1,26 @@
+<StackLayout>
+	<Label [text]="title" class="locations-title" [ngClass]="{'favorites-title': onlyFavorites}"></Label>
+	<FlexboxLayout class="locations-type">
+		<StackLayout (tap)="getNearLocationsOfType('health')">
+			<Image src="~/images/health.png" class="location-type-images" [ngClass]="{'location-type-clicked': type === 'health'}"></Image>
+			<Label text="Saúde"></Label>
+		</StackLayout>
+		<StackLayout (tap)="getNearLocationsOfType('hygiene')">
+			<Image src="~/images/hygiene.png" class="location-type-images" [ngClass]="{'location-type-clicked': type === 'hygiene'}"></Image>
+			<Label text="Higiene"></Label>
+		</StackLayout>
+		<StackLayout (tap)="getNearLocationsOfType('food')">
+			<Image src="~/images/food.png" class="location-type-images" [ngClass]="{'location-type-clicked': type === 'food'}"></Image>
+			<Label text="Refeição"></Label>
+		</StackLayout>
+		<StackLayout (tap)="getNearLocationsOfType('rest')">
+			<Image src="~/images/rest.png" class="location-type-images" [ngClass]="{'location-type-clicked': type === 'rest'}"></Image>
+			<Label text="Descanso"></Label>
+		</StackLayout>
+		<StackLayout (tap)="getNearLocationsOfType('safety')">
+			<Image src="~/images/safety.png" class="location-type-images" [ngClass]="{'location-type-clicked': type === 'safety'}"></Image>
+			<Label text="Segurança"></Label>
+		</StackLayout>
+	</FlexboxLayout>
+	<ns-locations-list [type]="type"></ns-locations-list>
+</StackLayout>

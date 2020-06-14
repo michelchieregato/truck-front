@@ -17,6 +17,7 @@ import { ListSavedPathsComponent } from './list-saved-paths/list-saved-paths.com
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
 import { FavouritesComponent } from './favourites/favourites.component';
+import { LocationsFilterComponent } from './locations-filter/locations-filter.component';
 
 import * as platform from "platform";
 declare var GMSServices: any;
@@ -44,7 +45,8 @@ declare var GMSServices: any;
         LocationsListComponent,
         CreateTripComponent,
         ListSavedPathsComponent,
-        FavouritesComponent
+        FavouritesComponent,
+        LocationsFilterComponent
     ],
     providers: [
         {

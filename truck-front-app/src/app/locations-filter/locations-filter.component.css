@@ -1,0 +1,30 @@
+.locations-type {
+    justify-content: space-between;
+    margin: 5 10;
+}
+
+.location-type-images {
+    width: 60;
+}
+
+.location-type-images + Label {
+    text-align: center;
+}
+
+.locations-title {
+    font-weight: bold;
+    font-size: 15;
+    margin: 5 10;
+}
+
+.location-type-clicked {
+    border-color: #35499F;
+    border-width: 2;
+    border-radius: 10;
+}
+
+.favorites-title {
+    font-weight: 500;
+    font-size: 12px;
+    color: #BFBFBF;
+}
