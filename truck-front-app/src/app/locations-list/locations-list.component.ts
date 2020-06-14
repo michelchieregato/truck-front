@@ -13,6 +13,7 @@ export class LocationsListComponent implements OnInit {
 
     @Input() set type(value: string) {
         this._type = value;
+        this.getLocations();
     };
 
     get type(): string {
