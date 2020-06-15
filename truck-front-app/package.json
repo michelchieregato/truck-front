@@ -24,6 +24,8 @@
     "nativescript-angular": "~8.21.0",
     "nativescript-geolocation": "^5.1.0",
     "nativescript-google-maps-sdk": "^2.9.1",
+    "nativescript-google-places": "0.0.3",
+    "nativescript-google-places-autocomplete": "^1.0.3",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.4.0",
     "tns-core-modules": "~6.5.0",
