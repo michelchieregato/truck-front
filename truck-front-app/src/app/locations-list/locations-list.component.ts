@@ -62,15 +62,22 @@ export class LocationsListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log('&&&&&&&&&&');
         this.getLocations();
     }
 
     private getLocations() {
-        // this.clientService.getLocations().subscribe((response) => {
-        //     console.log(response);
-        // }, error => console.log(error))
-        this.clientService.getDestinationsList(false).subscribe((r) => console.log(r))
+        this.clientService.getLocations().subscribe((r: any) => {
+            console.log(r);
+            this.placesList = r
+            this.placesList.forEach(
+                placeList => {
+                    placeList.types = placeList.services.map(service => service.name).join(',').split(',')
+                    placeList.services = placeList.services.map(service => service.name).join(',')
+                }
+            )
+
+            console.log(this.placesList);
+        })
     }
 
     evaluatePlace(place: any) {
