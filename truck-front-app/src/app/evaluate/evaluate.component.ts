@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Place} from "~/app/services/place.service";
+import {Place, PlaceService} from "~/app/services/place.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,13 +11,11 @@ export class EvaluateComponent implements OnInit {
     place: Place;
 
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private placeService: PlaceService) {
     }
 
     ngOnInit(): void {
-        this.place = new Place('Serviço de Atendimento ao Usuário CCR', 1500,
-            'Atendimento emergencial, atendimento médico, massagem, água, telefone',
-            4, ['servicos']);
+        this.place = this.placeService.currentPlaceSubject.getValue();
         this.detailPlace();
     }
 
