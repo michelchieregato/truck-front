@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Input} from "@angular/core";
 import {Place, PlaceService} from "~/app/services/place.service";
+import {ClientService} from "~/app/services/client.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -57,23 +58,19 @@ export class LocationsListComponent implements OnInit {
         }
     ];
 
-    constructor(private router: Router, private placeService: PlaceService) {
+    constructor(private router: Router, private placeService: PlaceService, private clientService: ClientService) {
     }
 
     ngOnInit(): void {
+        console.log('&&&&&&&&&&');
         this.getLocations();
     }
 
     private getLocations() {
-        // back integration
-        this.placesList = this.placesListMock;
-        if (this.type) {
-            this.placesList = this.placesListMock.filter((place) => {
-                return place.types.includes(this.type);
-            }).sort((a, b) => {
-                return a.distance < b.distance ? -1 : 1;
-            });
-        }
+        // this.clientService.getLocations().subscribe((response) => {
+        //     console.log(response);
+        // }, error => console.log(error))
+        this.clientService.getDestinationsList(false).subscribe((r) => console.log(r))
     }
 
     evaluatePlace(place: any) {
