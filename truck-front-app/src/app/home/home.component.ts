@@ -22,4 +22,8 @@ export class HomeComponent implements OnInit {
     navigateToLogin() {
         this.router.navigateByUrl('/login');
     }
+
+    navigateToCreateRoute() {
+        this.router.navigateByUrl('/create-trip');
+    }
 }
