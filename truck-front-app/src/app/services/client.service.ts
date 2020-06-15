@@ -20,4 +20,9 @@ export class ClientService {
     createDestination(infos: {from_name, from_location, to_name, to_location}) {
         return this.http.post(this.defaultApi + 'destinations/', infos);
     }
+
+    getLocations(data?) {
+        const params = data ? data : {};
+        return this.http.get(this.defaultApi + 'places/', {params: params});
+    }
 }

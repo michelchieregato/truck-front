@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Input} from "@angular/core";
 import {Place, PlaceService} from "~/app/services/place.service";
+import {ClientService} from "~/app/services/client.service";
 
 @Component({
     selector: 'ns-locations-list',
@@ -11,6 +12,16 @@ import {Place, PlaceService} from "~/app/services/place.service";
 export class LocationsListComponent implements OnInit {
     private _type: string;
     placesList: any;
+    // placesListMock = [
+    //     {
+    //         name: "Posto BR 24h",
+    //         distance: 250,
+    //         distanceDisplay: '250m',
+    //         services: "Abastecimento, Banheiro, Chuveiro, alimentação",
+    //         rating: 4,
+    //         types: ['food', 'hygiene']
+    //     }
+    // ]
 
     @Input() set type(value: string) {
         this._type = value;
@@ -21,58 +32,19 @@ export class LocationsListComponent implements OnInit {
         return this._type;
     }
 
-    placesListMock = [
-        {
-            name: "Posto BR 24h",
-            distance: 250,
-            distanceDisplay: '250m',
-            services: "Abastecimento, Banheiro, Chuveiro, alimentação",
-            rating: 4,
-            types: ['food', 'hygiene']
-        },
-        {
-            name: "Einstein",
-            distance: 2540,
-            distanceDisplay: '2540m',
-            services: "Abastecimento, Banheiro, Chuveiro, alimentação",
-            rating: 4,
-            types: ['food', 'health']
-        },
-        {
-            name: "Posto de saúde UBS",
-            distanceDisplay: "250m",
-            distance: 250,
-            services: "Hospital/posto de saúde",
-            rating: 4,
-            types: ['health']
-        },
-        {
-            name: "Posto da Policia Federal",
-            distanceDisplay: "1,5km",
-            distance: 1500,
-            services: "Policiamento",
-            rating: 2,
-            types: ['safety']
-        }
-    ];
-
-    constructor(private placeService: PlaceService) {
+    constructor(private placeService: PlaceService, private clientService: ClientService) {
     }
 
     ngOnInit(): void {
+        console.log('&&&&&&&&&&');
         this.getLocations();
     }
 
     private getLocations() {
-        // back integration
-        this.placesList = this.placesListMock;
-        if (this.type) {
-            this.placesList = this.placesListMock.filter((place) => {
-                return place.types.includes(this.type);
-            }).sort((a, b) => {
-                return a.distance < b.distance ? -1 : 1;
-            });
-        }
+        // this.clientService.getLocations().subscribe((response) => {
+        //     console.log(response);
+        // }, error => console.log(error))
+        this.clientService.getDestinationsList(false).subscribe((r) => console.log(r))
     }
 
     evaluatePlace(place: any) {
