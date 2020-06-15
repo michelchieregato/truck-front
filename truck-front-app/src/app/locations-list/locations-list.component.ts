@@ -46,7 +46,7 @@ export class LocationsListComponent implements OnInit {
     }
 
     evaluatePlace(place: any) {
-        const newPlace = new Place(place.name, place.distance, place.services, place.rating, place.types);
+        const newPlace = new Place(place.name, place.distance, place.services, place.rating, place.types, place.image_name);
         this.placeService.currentPlaceSubject.next(newPlace);
         this.router.navigateByUrl('/evaluate');
     }
