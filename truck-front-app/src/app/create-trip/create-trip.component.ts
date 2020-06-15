@@ -9,18 +9,10 @@ import {ClientService} from '~/app/services/client.service'
 export class CreateTripComponent implements OnInit {
     currentPlace: string;
     destination: string;
-    constructor(private clientService: ClientService) { }
+    constructor(private clientService: ClientService) {
+    }
 
     ngOnInit(): void {
-
-    }
-
-    getCurrentLocation() {
-
-    }
-
-    getDestinationLocation() {
-
     }
 
     submitDestination() {
