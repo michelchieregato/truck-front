@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ClientService} from '~/app/services/client.service'
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'ns-list-saved-paths',
@@ -14,7 +15,7 @@ export class ListSavedPathsComponent implements OnInit {
   @Input() set favorties(value: boolean) {
       this.onlyFavorites = value ? value : null;
   };
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
       this.getDestinationsList();
@@ -28,4 +29,8 @@ export class ListSavedPathsComponent implements OnInit {
               console.log(error);
           });
   }
+
+  navigateToSurroundings() {
+        this.router.navigateByUrl('/surrounding')
+    }
 }

@@ -1,7 +1,7 @@
 <StackLayout>
 	<ListView [items]="destinationsList" separatorColor="transparent" height="300">
 		<ng-template let-destination="item">
-			<StackLayout>
+			<StackLayout (tap)="navigateToSurroundings()">
 				<GridLayout rows="auto,auto" columns="250,auto" class="destination-item">
 					<Label row="0" col="0" textWrap="true">
 						<FormattedString>
