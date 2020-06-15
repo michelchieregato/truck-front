@@ -1,5 +1,5 @@
 <FlexboxLayout flexDirection="column" justifyContent="flex-start">
-    <Image src="~/images/sau.png" class="big-img" stretch="aspectFill"></Image>
+    <Image [src]="'~/images/'+ place.imagePath" class="big-img" stretch="aspectFill"></Image>
     <FlexboxLayout class="orange-title" flexDirection="column">
         <Label class="h1 title" [text]="place.name" textWrap="true"></Label>
         <Label class="h3 sub-title" [text]="place.address" textWrap="true"></Label>

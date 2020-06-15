@@ -2,8 +2,8 @@
 	<ng-template let-place="item" let-i="index">
 		<StackLayout (tap)="evaluatePlace(place)">
 			<GridLayout rows="auto,40,auto" columns="100,auto,auto" class="place-item" height="90">
-				<StackLayout height="70" width="70" backgroundColor="#C4C4C4" row="0" col="0" rowSpan="3"
-				             borderRadius="10px"></StackLayout>
+				<Image [src]="'~/images/' + place.image_name" height="70" width="70" stretch="aspectFill" row="0" col="0" rowSpan="3"
+					   borderRadius="10px"></Image>
 				<Label row="0" col="1">
 					<FormattedString>
 						<Span [text]="place.name + '  '" fontWeight="Bold"></Span>
