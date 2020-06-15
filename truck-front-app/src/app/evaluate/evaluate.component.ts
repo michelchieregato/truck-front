@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Place} from "~/app/services/place.service";
 import {Router} from "@angular/router";
+import {ClientService} from '~/app/services/client.service'
 
 @Component({
     selector: 'ns-evaluate',
@@ -9,15 +10,16 @@ import {Router} from "@angular/router";
 })
 export class EvaluateComponent implements OnInit {
     place: Place;
+    messages;
 
-
-    constructor(private router: Router) {
+    constructor(private router: Router, private clientService: ClientService) {
     }
 
     ngOnInit(): void {
         this.place = new Place('Serviço de Atendimento ao Usuário CCR', 1500,
             'Atendimento emergencial, atendimento médico, massagem, água, telefone',
             4, ['servicos']);
+        // this.getMessages();
         this.detailPlace();
     }
 
@@ -28,6 +30,15 @@ export class EvaluateComponent implements OnInit {
 
     navigateToFavorites() {
         this.router.navigateByUrl('/favorites')
+    }
+
+    getMessages() {
+        this.clientService.getMessages(this.place.name)
+            .subscribe((result) => {
+                this.messages = result;
+            }, (error) => {
+                console.log(error);
+            });
     }
 
 }

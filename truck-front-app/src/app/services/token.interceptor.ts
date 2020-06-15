@@ -23,8 +23,9 @@ export class TokenInterceptor implements HttpInterceptor {
                 }
             }
         );
+
         modifiedRequest = req.clone({
-            headers: req.headers.append('Authorization', 'Token ' + token)
+            headers: req.headers.append('Authorization', 'Token ' + 'df46e3a1cdab95bfbf8a59e99f1a21c331ffd4be')
         });
         return next.handle(modifiedRequest);
     }

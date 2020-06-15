@@ -6,7 +6,7 @@ import {BehaviorSubject} from "rxjs";
     providedIn: 'root'
 })
 export class UserService {
-    defaultApi = 'http://0.0.0.0:8000/';
+    defaultApi = 'http://192.168.0.24:8000/';
     currentUserSubject = new BehaviorSubject<User>(null);
     currentUser = this.currentUserSubject.asObservable();
 
