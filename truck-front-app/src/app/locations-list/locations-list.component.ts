@@ -62,15 +62,17 @@ export class LocationsListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log('&&&&&&&&&&');
         this.getLocations();
     }
 
     private getLocations() {
-        // this.clientService.getLocations().subscribe((response) => {
-        //     console.log(response);
-        // }, error => console.log(error))
-        this.clientService.getDestinationsList(false).subscribe((r) => console.log(r))
+        if (this.type) {
+            this.placesList = this.placesListMock.filter((place) => {
+                return place.types.includes(this.type);
+            }).sort((a, b) => {
+                return a.distance < b.distance ? -1 : 1;
+            })
+        }
     }
 
     evaluatePlace(place: any) {
