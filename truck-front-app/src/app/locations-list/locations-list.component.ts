@@ -37,7 +37,7 @@ export class LocationsListComponent implements OnInit {
             this.placesList.forEach(
                 placeList => {
                     placeList.types = placeList.services.map(service => service.name).join(',').split(',')
-                    placeList.services = placeList.services.map(service => service.name).join(',')
+                    placeList.services = placeList.services.map(service => service.name).join(', ')
                 }
             )
 
