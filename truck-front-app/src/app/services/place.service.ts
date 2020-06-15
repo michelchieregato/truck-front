@@ -21,14 +21,16 @@ export class Place {
     types: Array<any>;
     address: string;
     workingTime: string;
+    imagePath: string
     messages: Array<any>
 
-    constructor(name, distance, services, rating, types) {
+    constructor(name, distance, services, rating, types, imagePath) {
         this.name = name;
         this.distance = distance;
         this.services = services;
         this.rating = rating;
         this.types = types;
+        this.imagePath = imagePath;
     }
 
     addDetails(address, workingTime, messages) {

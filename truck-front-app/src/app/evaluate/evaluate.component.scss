@@ -10,7 +10,8 @@
 
 .title {
   margin-left: 0;
-  margin-bottom: 20;
+  margin-bottom: 10;
+  margin-top: 10;
   color: white;
   font-size: 25;
 }
@@ -48,6 +49,7 @@
     font-weight: bold;
     align-self: flex-start;
     vertical-align: baseline;
+    margin-top: 0;
   }
 
   .messages-div {

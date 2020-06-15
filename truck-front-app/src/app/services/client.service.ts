@@ -26,4 +26,9 @@ export class ClientService {
 
         return this.http.get(this.defaultApi + 'places/messages', {params: params});
     }
+
+    getLocations(data?) {
+        const params = data ? data : {};
+        return this.http.get(this.defaultApi + 'places/', {params: params});
+    }
 }
